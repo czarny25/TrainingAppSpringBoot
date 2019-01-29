@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+
+<body>	
+	<div class="header" th:fragment="header">	    
+	    <nav class="navbar navbar-inverse navbar-fixed-top">    
+	    	<div class="container-fluid">    	
+	    		<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#collapsemenu"
+						aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					
+					<a href="/product.html" >
+					<img role="presentation"
+	                     src="../static/images/logoOTO.png"
+	                     th:src="@{images/logoOTO.png}"
+	                     
+	                     class="gymLogo"/>
+					</a>
+					
+	    		</div>
+	    	
+	    	</div>
+	    	<div>
+			    <div class="container">
+			        <h1>Spring Framework Guru</h1>
+			        <p class="lead" th:text="#{index.courses.tagline}">Online Courses for Spring Framework</p>
+			    </div>
+			</div>
+	    	
+	        <div class="collapse navbar-collapse" id="collapsemenu">
+				
+				 
+				<ul class="nav navbar-nav">
+					<!--<li> <a href="/">Home</a></li>-->					
+					<li> <a href="product.html">Home</a></li>
+					<li> <a href="product.html">About</a></li>
+					<li> <a href="product.html">Contact</a></li>
+	
+				
+	
+					<li>
+						<button class="btn btn-default navbar-btn">
+								<span class="glyphicon glyphicon-log-in"></span> Login
+						</button>
+					</li>
+				<!--
+					<li>
+						<button class="btn btn-default navbar-btn">
+								<span class="glyphicon glyphicon-log-out"></span> Log out
+						</button>
+					</li>
+				-->
+				</ul>
+			</div>    
+	    </nav>	    
+	</div>
+</body>
+</html>

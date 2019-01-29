@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8"/>
-    
-    <title th:text="#{index.page.title}">Page Title</title>
-
+    <meta  charset="UTF-8"/>
+    <title th:text="#{index.courses.headline}">Page Title</title>
+ 
     <link href="../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
-            th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+          th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
 
     <script src="../static/js/jquery-2.1.4.min.js"
-          th:src="@{/js/jquery-2.1.4.min.js}"></script>
+            th:src="@{/js/jquery-2.1.4.min.js}"></script>
 
-    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>  
+	<script src="../static/js/headerScroll.js"
+            th:src="@{/js/headerScroll.js}"></script>
+    
+            
+    <link th:href="@{/css/temp.css}" rel="stylesheet" media="screen"/>
 
+	
 </head>
 <body>
-	<h1>This is heading</h1>
-	<h2>This is heading 2</h2>
-	<p style="color: red">This is a paragraph</p>
+	<div>
+		<div class="header" th:replace="fragments/header :: header"></div>
+    
+		<div class="mainContent "></div>
+		
+		<h1>My users!</h1>
+
+		<table>
+		    <tr>
+		        <th>ID</th>
+		        <th>user Name</th>
+		    </tr>
+		    <tr th:each="user : ${users}">
+		        <td th:text="${user.id}">123</td>
+		        <td th:text="${user.userName}">Tasty user</td>
+		    </tr>
+		</table>
+		
+		
+		<div class="footer" th:replace="fragments/footer :: footer"></div>
+	</div>
 </body>
-</html> 
+</html>

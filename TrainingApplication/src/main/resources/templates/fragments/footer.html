@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+
+<body>
+	<div class="footer" th:fragment="footer">
+		<div class="footer container-fluid">
+			<div class="contacts row">
+				<div class="contactDetails col-xs-6">
+					<h4>Contact Us</h4>
+					<p>
+						<!-- <a href="${pageContext.request.contextPath}/contact">-->
+						ziejacode@gmail.com
+					</p>
+				</div>
+			  
+				<div class="getSocial col-xs-6">
+					<h4>Get social</h4>	
+					
+					<a><img role="presentation"
+	                     src="../static/images/facebookLogoWhite.png"
+	                     th:src="@{images/facebookLogoWhite.png}"
+	                     class="FacebookLogo"/>
+	                </a>
+	                <a>
+	                <img role="presentation"
+	                     src="../static/images/twitterLogoWhite.png"
+	                     th:src="@{images/twitterLogoWhite.png}"
+	                     class="TwitterLogo"/>
+	                </a>
+				</div>	
+			</div>
+			<div class="copyrights row">
+				<p class="col-xs-12">copyrights ziejacode.com</p>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>
